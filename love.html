@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>love</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/love.css" />
+</head>
+<body>
+  <div class="video-layer">
+    <video class="bg-video" id="loveVideo" autoplay muted loop playsinline>
+      <source src="lovev.mp4" type="video/mp4" />
+    </video>
+    <div class="video-veil"></div>
+    <div class="grain"></div>
+    <div class="glow" id="glow"></div>
+  </div>
+
+  <main class="love-page">
+    <a class="back-link" href="letter.html">← back</a>
+    <button class="sound-toggle" id="soundToggle" type="button">sound off</button>
+
+    <div class="top-note">entry / central word</div>
+
+    <section class="center-stage">
+      <div class="orbit orbit-1"></div>
+      <div class="orbit orbit-2"></div>
+      <div class="orbit orbit-3"></div>
+
+      <div class="whispers">
+        <span>to remain</span>
+        <span>to return</span>
+        <span>to undo distance</span>
+        <span>to risk tenderness</span>
+      </div>
+
+      <button class="core-word" id="coreWord" type="button">
+        <span class="core-word-main">love</span>
+        <span class="core-word-sub">click to enter</span>
+      </button>
+    </section>
+
+    <section class="bottom-text" id="bottomText">
+      <p class="line active">love is the one word that keeps returning.</p>
+      <p class="line">not always softly, but always visibly.</p>
+      <p class="line">sometimes as warmth. sometimes as ache.</p>
+    </section>
+
+    <div class="immersive-note">click anywhere to close</div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script src="js/love-bg.js"></script>
+  <script src="js/love.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>miss</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/miss.css" />
+</head>
+<body>
+  <video class="bg-video" id="bgVideo" autoplay muted loop playsinline>
+    <source src="missv.mp4" type="video/mp4" />
+  </video>
+
+  <video class="memory-video" id="memoryVideo" muted loop playsinline>
+    <source src="missv2.mp4" type="video/mp4" />
+  </video>
+
+  <div class="film-grain"></div>
+  <div class="page-dim" id="pageDim"></div>
+
+  <main class="page">
+    <a class="back" href="letter.html">← back</a>
+
+    <section class="left-panel">
+      <div class="search-box">
+        <div class="search-label">search</div>
+        <div class="search-word">miss</div>
+      </div>
+
+      <div class="entry-meta">
+        <span>/mɪs/</span>
+        <span>verb</span>
+      </div>
+
+      <div class="definition-block">
+        <p>to feel the absence of someone</p>
+        <p>to reach for what is no longer there</p>
+        <p>to remember, involuntarily</p>
+      </div>
+
+      <div class="extended-block">
+        <p>
+          To miss someone is to live with a quiet interruption.
+        </p>
+        <p>
+          It is not just remembering, but repeatedly encountering
+          their absence in places they no longer occupy.
+        </p>
+      </div>
+
+      <div class="tags">
+        <span>absence</span>
+        <span>memory</span>
+        <span>distance</span>
+        <span>afterimage</span>
+      </div>
+    </section>
+
+    <section class="right-panel">
+      <img src="miss2.png" alt="miss image 2" class="main-image" />
+      <img src="miss.png" alt="miss image 1" class="overlay-image" />
+    </section>
+
+    <section class="quote-panel">
+      <div class="quote-panel-title">miss in cinema</div>
+
+      <button class="quote" data-mode="hover" data-sound="off">
+        <span class="quote-text">“I miss you.”</span>
+        <span class="quote-source">— Before Sunset (2004)</span>
+      </button>
+
+      <button class="quote" data-mode="hover" data-sound="on">
+        <span class="quote-text">“I wish I knew how to quit you.”</span>
+        <span class="quote-source">— Brokeback Mountain (2005)</span>
+      </button>
+    </section>
+  </main>
+
+  <div class="video-fullscreen" id="videoFullscreen">
+    <div class="video-note">click anywhere to close</div>
+  </div>
+
+  <script src="js/miss.js"></script>
+</body>
+</html>
