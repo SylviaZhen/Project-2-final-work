@@ -1,0 +1,30 @@
+body{
+margin:0;
+font-family:'Special Elite', monospace;
+background:url("../paperbg.png") center/cover no-repeat fixed;
+color:#111;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+padding:80px 30px;
+}
+
+h1{
+font-weight:400;
+font-size:42px;
+margin-bottom:30px;
+}
+
+p{
+font-size:22px;
+line-height:1.7;
+}
+
+.back{
+display:inline-block;
+margin-bottom:40px;
+text-decoration:none;
+color:#444;
+}

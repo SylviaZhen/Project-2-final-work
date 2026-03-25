@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Special Elite', monospace;
+  background: url("../paperbg.png") center center / cover no-repeat;
+  color: #1f1b18;
+}
+
+.letter-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.back-link {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  z-index: 20;
+  text-decoration: none;
+  color: rgba(31, 27, 24, 0.82);
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  transition: opacity 0.25s ease;
+}
+
+.back-link:hover {
+  opacity: 0.6;
+}
+
+.letter-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 60px;
+}
+
+.letter-head {
+  width: min(760px, 78vw);
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.letter-head p {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.6;
+  color: rgba(31, 27, 24, 0.9);
+}
+
+.poem {
+  width: min(760px, 78vw);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.poem p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 0.01em;
+  color: rgba(31, 27, 24, 0.96);
+}
+
+.kw {
+  color: rgba(31, 27, 24, 0.96);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.kw:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .letter-page {
+    padding: 20px 16px 30px;
+  }
+
+  .back-link {
+    top: 18px;
+    left: 16px;
+    font-size: 15px;
+  }
+
+  .letter-wrap {
+    padding: 72px 8px 40px;
+    justify-content: flex-start;
+  }
+
+  .letter-head,
+  .poem {
+    width: min(92vw, 680px);
+  }
+
+  .letter-head {
+    margin-bottom: 22px;
+  }
+
+  .letter-head p {
+    font-size: 19px;
+  }
+
+  .poem {
+    gap: 22px;
+  }
+
+  .poem p {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+}

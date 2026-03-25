@@ -1,0 +1,132 @@
+/* css/styles.css */
+:root{
+  --ink: rgba(12,12,12,.92);
+  --inkSoft: rgba(12,12,12,.55);
+}
+
+html, body{ height:100%; }
+
+body{
+  margin:0;
+  font-family:'Special Elite', ui-monospace, monospace;
+  color: var(--ink);
+  background: url("../paperbg.png") center / cover no-repeat fixed;
+}
+
+.stage{
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:56px 24px;
+}
+
+#sentence{
+  font-size: clamp(3.6rem, 5.2vw, 5.6rem);
+  white-space:nowrap;
+  user-select:none;
+  margin-bottom:70px;
+  text-shadow:
+    0 0.7px 0 rgba(255,255,255,.35),
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+#blank{
+  display:inline-block;
+  min-width:230px;
+  text-align:center;
+}
+
+.caret{
+  display:inline-block;
+  width:10px;
+  margin-left:10px;
+  animation: blink .9s infinite;
+}
+
+@keyframes blink{
+  0%,45%{opacity:1;}
+  46%,100%{opacity:0;}
+}
+
+#words{
+  position:relative;
+  width:min(1100px, 86vw);
+  height:240px;
+}
+
+.word{
+  position:absolute;
+  cursor:pointer;
+  user-select:none;
+  font-size: 2.0rem;
+  letter-spacing: .4px;
+  color: var(--inkSoft);
+  text-shadow: 0 0.7px 0 rgba(255,255,255,.3);
+  transform: rotate(var(--r, 0deg));
+  transform-origin: 50% 70%;
+  transition: transform .18s ease, color .18s ease, opacity .18s ease, filter .18s ease;
+  opacity: .92;
+}
+
+.word:hover{
+  color: var(--ink);
+  transform: rotate(var(--r,0deg)) translateY(-2px);
+}
+
+.word.love{
+  color: rgba(12,12,12,.42);
+  opacity: .85;
+  z-index: 5;
+}
+
+.word.love::after{
+  content:"";
+  position:absolute;
+  left:-18px;
+  right:-18px;
+  top:-14px;
+  bottom:-12px;
+  border-radius: 999px;
+  pointer-events:none;
+  background: radial-gradient(circle at 50% 50%, rgba(0,0,0,.14), transparent 62%);
+  opacity: 0;
+  transform: scale(.98);
+  transition: opacity .22s ease, transform .22s ease;
+}
+
+.word.love.is-hovering::after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.word.love .hold{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-10px;
+  height:2px;
+  border-radius:2px;
+  background: rgba(0,0,0,.10);
+  overflow:hidden;
+  opacity:0;
+  transition: opacity .2s ease;
+}
+
+.word.love.is-hovering .hold{
+  opacity:1;
+}
+
+.word.love .hold > i{
+  display:block;
+  height:100%;
+  width:0%;
+  background: rgba(0,0,0,.28);
+}
+
+@media (max-width: 520px){
+  #words{ height: 300px; }
+  .word{ font-size: 1.7rem; }
+  #blank{ min-width: 180px; }
+}
